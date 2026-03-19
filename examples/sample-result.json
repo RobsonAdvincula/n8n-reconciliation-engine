@@ -1,0 +1,51 @@
+{
+  "run_date": "2024-12-01",
+  "period": "2024-11",
+  "summary": {
+    "total_tax_portal": 607,
+    "total_erp": 703,
+    "exact_matches": 149,
+    "probable_matches": 325,
+    "value_divergent": 3,
+    "missing_in_erp": 124,
+    "missing_in_portal": 230,
+    "cancelled": 6
+  },
+  "sample_records": [
+    {
+      "document_number": "FAT-2024-00445",
+      "supplier_name": "ACME SUPPLIES LDA",
+      "invoice_date": "2024-11-03",
+      "amount": 1250.00,
+      "match_status": "exact",
+      "match_level": 1
+    },
+    {
+      "document_number": "FAC-2024-00892",
+      "supplier_name": "TECHSOFT SOLUTIONS SA",
+      "invoice_date": "2024-11-10",
+      "amount": 890.00,
+      "match_status": "probable",
+      "match_level": 4,
+      "notes": "Prefix variant: FAC vs FAT"
+    },
+    {
+      "document_number": "GL-2024-334",
+      "supplier_name": "GLOBAL LOGISTICS PT",
+      "invoice_date": "2024-11-15",
+      "amount": 450.00,
+      "match_status": "divergent",
+      "match_level": 3,
+      "notes": "ERP amount: 455.00 — difference: 5.00"
+    },
+    {
+      "document_number": "INV-2024-1122",
+      "supplier_name": "NORTH SUPPLIES LDA",
+      "invoice_date": "2024-11-20",
+      "amount": 2100.00,
+      "match_status": "missing_erp",
+      "match_level": null,
+      "notes": "Present in tax portal — not found in ERP"
+    }
+  ]
+}
